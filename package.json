@@ -1,5 +1,5 @@
 {
-  "name": "ng2-emoji",
+  "name": "@standuply/ng2-emoji",
   "version": "0.2.0",
   "scripts": {
     "build": "./build.sh",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AhsanAyaz/ng2-emoji"
+    "url": "https://github.com/standuply/ng2-emoji"
   },
   "author": {
     "name": "Ahsan Ayaz",
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AhsanAyaz/ng2-emoji/issues"
+    "url": "https://github.com/standuply/ng2-emoji/issues"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.6",
