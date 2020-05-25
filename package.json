@@ -1,6 +1,6 @@
 {
   "name": "@standuply/ng2-emoji",
-  "version": "0.2.0",
+  "version": "9.0.0",
   "scripts": {
     "build": "./build.sh",
     "build:watch": "node ./watch.js",
