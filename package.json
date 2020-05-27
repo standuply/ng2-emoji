@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/standuply/ng2-emoji"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": {
     "name": "Ahsan Ayaz",
     "email": "ahsan.ubitian@gmail.com"
@@ -23,8 +26,8 @@
     "url": "https://github.com/standuply/ng2-emoji/issues"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.6",
-    "@angular/common": "^9.1.",
+    "@angular-devkit/build-angular": "^0.901.7",
+    "@angular/common": "^9.1.7",
     "@angular/compiler": "^9.1.7",
     "@angular/compiler-cli": "^9.1.7",
     "@angular/core": "^9.1.7",
@@ -36,18 +39,18 @@
     "core-js": "^2.4.1",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
-    "karma": "~1.4.1",
+    "karma": "^5.0.9",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "node-watch": "^0.5.2",
-    "protractor": "~5.1.0",
+    "protractor": "^7.0.0",
     "rollup": "^0.41.6",
     "rxjs": "^6.5.5",
     "ts-node": "~2.0.0",
-    "tslint": "~4.5.0",
+    "tslint": "^5.20.1",
     "typescript": "3.8.3",
     "zone.js": "~0.10.3"
   },
@@ -56,9 +59,9 @@
   },
   "dependencies": {
     "@angular/cli": "^9.1.6",
-    "gulp": "^3.9.1",
+    "gulp": "4.0.2",
     "gulp-csso": "^3.0.0",
-    "gulp-imagemin": "^3.2.0",
+    "gulp-imagemin": "5.0.3",
     "gulp.spritesmith": "^6.4.0",
     "merge-stream": "^1.0.1",
     "rxjs-compat": "^6.0.0-rc.0",
