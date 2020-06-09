@@ -2,14 +2,16 @@
 // It is NOT used for building the library.
 {
   "compilerOptions": {
-    "outFile": "./index.js",
+    "outDir": "./build",
+//    "outFile": "./index.js",
     "baseUrl": "./src",
     "declaration": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "importHelpers": true,
-    "module": "amd",
+//    "module": "amd",
+    "module": "esnext",
     "moduleResolution": "node",
     "rootDir": "./src",
     "lib": [
@@ -17,7 +19,8 @@
       "dom"
     ],
     "skipLibCheck": true,
-    "target": "es2015",
+//    "target": "es2015",
+    "target": "esnext",
     // Don't auto-discover @types/node, it results in a ///<reference in the .d.ts output
     "types": []
   },
