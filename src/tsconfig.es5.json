@@ -29,6 +29,6 @@
     "aot": true
   },
   "files": [
-    "./index.ts"
+    "./ng2-emoji.module.ts"
   ]
 }

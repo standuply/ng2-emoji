@@ -2,11 +2,14 @@
 // It is NOT used for building the library.
 {
   "compilerOptions": {
+    "outFile": "./index.js",
     "baseUrl": "./src",
+    "declaration": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
-    "module": "esnext",
+    "module": "amd",
     "moduleResolution": "node",
     "rootDir": "./src",
     "lib": [
@@ -22,5 +25,11 @@
     "enableIvy": true,
     "aot": false,
     "strictMetadataEmit": false
-  }
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
