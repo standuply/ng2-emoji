@@ -1,1 +1,1 @@
-export * from './src/ng2-emoji.module';
+export * from './build/ng2-emoji.module';
