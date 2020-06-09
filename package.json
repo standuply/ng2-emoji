@@ -1,12 +1,6 @@
 {
-  "name": "@standuply/ng2-emoji",
+  "name": "ng2-emoji",
   "version": "9.0.0",
-  "scripts": {
-    "build": "./build.sh",
-    "build:watch": "node ./watch.js",
-    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "test": "tsc && karma start"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/standuply/ng2-emoji"
@@ -25,35 +19,6 @@
   "bugs": {
     "url": "https://github.com/standuply/ng2-emoji/issues"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^0.901.7",
-    "@angular/common": "^9.1.7",
-    "@angular/compiler": "^9.1.7",
-    "@angular/compiler-cli": "^9.1.7",
-    "@angular/core": "^9.1.7",
-    "@angular/platform-browser": "^9.1.7",
-    "@angular/platform-browser-dynamic": "^9.1.7",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "~6.0.60",
-    "codelyzer": "^5.0.1",
-    "core-js": "^2.4.1",
-    "jasmine-core": "~2.5.2",
-    "jasmine-spec-reporter": "~3.2.0",
-    "karma": "^5.0.9",
-    "karma-chrome-launcher": "~2.0.0",
-    "karma-cli": "~1.0.1",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
-    "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "node-watch": "^0.5.2",
-    "protractor": "^7.0.0",
-    "rollup": "^0.41.6",
-    "rxjs": "^6.5.5",
-    "ts-node": "~2.0.0",
-    "tslint": "^5.20.1",
-    "typescript": "3.8.3",
-    "zone.js": "~0.10.3"
-  },
   "engines": {
     "node": ">=6.0.0"
   },
@@ -68,5 +33,17 @@
     "tsickle": "^0.38.1",
     "tslib": "^1.9.0",
     "vinyl-buffer": "^1.0.0"
+  },
+  "main": "bundles/ng2-emoji.umd.js",
+  "module": "fesm5/ng2-emoji.js",
+  "es2015": "fesm2015/ng2-emoji.js",
+  "esm5": "esm5/ng2-emoji.js",
+  "esm2015": "esm2015/ng2-emoji.js",
+  "fesm5": "fesm5/ng2-emoji.js",
+  "fesm2015": "fesm2015/ng2-emoji.js",
+  "typings": "ng2-emoji.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
   }
 }
