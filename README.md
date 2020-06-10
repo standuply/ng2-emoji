@@ -1,24 +1,80 @@
-# Ng2Emoji
+## Installation
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+To install this library, run:
 
-## Code scaffolding
+```bash
+$ npm install @standuply/ng2-emoji --save
+```
 
-Run `ng generate component component-name --project ng2-emoji` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng2-emoji`.
-> Note: Don't forget to add `--project ng2-emoji` or else it will be added to the default project in your `angular.json` file. 
+## Usage
 
-## Build
+`VERY IMPORTANT`
+In one of your css/scss files. include these styles:
 
-Run `ng build ng2-emoji` to build the project. The build artifacts will be stored in the `dist/` directory.
+```css
+.emoji{
+    display:inline-block;
+}
+```
 
-## Publishing
+In your Angular `AppModule`:
 
-After building your library with `ng build ng2-emoji`, go to the dist folder `cd dist/ng2-emoji` and run `npm publish`.
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Running unit tests
+import { AppComponent } from './app.component';
 
-Run `ng test ng2-emoji` to execute the unit tests via [Karma](https://karma-runner.github.io).
+// Import your library
+import { Ng2EmojiModule } from '@standuply/ng2-emoji';
 
-## Further help
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    // Include the awesome
+    Ng2EmojiModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+In your `index.html`:
+```xml
+<link href="./node_modules/@standuply/ng2-emoji/css/ng2-emoji.css" rel="stylesheet">
+```
+
+OR if using angular-cli.json, use:
+```json
+ "apps": [
+    {
+      ...
+      "styles": [
+        "styles.css",
+        "../node_modules/ng2-emoji/css/ng2-emoji.css"
+      ],
+      ...
+  ]
+```
+
+In your component where you want to use `ng2-emoji`, just use:
+```xml
+ <div class="message-container" [innerHTML]="myMessageString | emojis">
+ </div>
+```
+where the model `myMessageString` inside your `@Component` will be:
+
+```typescript
+...
+export class MyComponent {
+    public messageString: String = "";
+    constructor() {
+        this.myMessageString = 'Hello, how are you? :smile: It was fun at the bowling game the other day :joy:';
+    }
+}
+```

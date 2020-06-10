@@ -1,0 +1,8 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ng2-emoji",
+  "lib": {
+    "entryFile": "src/ng2-emoji"
+  },
+  "whitelistedNonPeerDependencies": ["."]
+}
