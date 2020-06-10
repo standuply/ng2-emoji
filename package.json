@@ -48,18 +48,12 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "es2015": "fesm2015/ng2-emoji.js",
-  "esm2015": "esm2015/ng2-emoji.js",
-  "esm5": "esm5/ng2-emoji.js",
-  "fesm2015": "fesm2015/ng2-emoji.js",
-  "fesm5": "fesm5/ng2-emoji.js",
   "homepage": "https://github.com/standuply/ng2-emoji#readme",
   "keywords": [
     "angular"
   ],
   "license": "MIT",
   "main": "bundles/ng2-emoji.umd.js",
-  "module": "fesm5/ng2-emoji.js",
   "name": "@standuply/ng2-emoji",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
