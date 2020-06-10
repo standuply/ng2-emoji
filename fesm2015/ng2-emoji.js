@@ -1,8 +1,12 @@
-import {Injectable} from '@angular/core';
+import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdirectiveInject, ɵɵdefinePipe, Pipe, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
-@Injectable()
-export class Ng2EmojiService {
-  public static emojis: Array<string> = [
+class Ng2EmojiService {
+    constructor() {
+    }
+}
+Ng2EmojiService.emojis = [
     'bowtie', 'smile', 'laughing', 'blush', 'smiley', 'relaxed',
     'smirk', 'heart_eyes', 'kissing_heart', 'kissing_closed_eyes', 'flushed',
     'relieved', 'satisfied', 'grin', 'wink', 'stuck_out_tongue_winking_eye',
@@ -164,9 +168,69 @@ export class Ng2EmojiService {
     'large_blue_circle', 'large_blue_diamond', 'large_orange_diamond',
     'small_blue_diamond', 'small_orange_diamond', 'small_red_triangle',
     'small_red_triangle_down', 'shipit'
-  ];
-  public static emojisRegex = new RegExp(':(' + Ng2EmojiService.emojis.join('|') + '):', 'g');
-  constructor() {
+];
+Ng2EmojiService.emojisRegex = new RegExp(':(' + Ng2EmojiService.emojis.join('|') + '):', 'g');
+Ng2EmojiService.ɵfac = function Ng2EmojiService_Factory(t) { return new (t || Ng2EmojiService)(); };
+Ng2EmojiService.ɵprov = ɵɵdefineInjectable({ token: Ng2EmojiService, factory: Ng2EmojiService.ɵfac });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2EmojiService, [{
+        type: Injectable
+    }], function () { return []; }, null); })();
 
-  }
+class Ng2EmojiPipe {
+    constructor(_sanitizer) {
+        this._sanitizer = _sanitizer;
+    }
+    transform(value, args) {
+        value = value + ''; // make sure it's a string
+        return this._sanitizer.bypassSecurityTrustHtml(value.replace(Ng2EmojiService.emojisRegex, function (match, text) {
+            return `<i class="emoji icon-ng2_em_${text}" title=":${text}:" style="display:inline-block;"></i>`;
+        }));
+    }
 }
+Ng2EmojiPipe.ɵfac = function Ng2EmojiPipe_Factory(t) { return new (t || Ng2EmojiPipe)(ɵɵdirectiveInject(DomSanitizer)); };
+Ng2EmojiPipe.ɵpipe = ɵɵdefinePipe({ name: "emojis", type: Ng2EmojiPipe, pure: true });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2EmojiPipe, [{
+        type: Pipe,
+        args: [{
+                name: 'emojis'
+            }]
+    }], function () { return [{ type: DomSanitizer }]; }, null); })();
+
+class Ng2EmojiModule {
+    static forRoot() {
+        return {
+            ngModule: Ng2EmojiModule,
+            providers: [Ng2EmojiService]
+        };
+    }
+}
+Ng2EmojiModule.ɵmod = ɵɵdefineNgModule({ type: Ng2EmojiModule });
+Ng2EmojiModule.ɵinj = ɵɵdefineInjector({ factory: function Ng2EmojiModule_Factory(t) { return new (t || Ng2EmojiModule)(); }, imports: [[
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(Ng2EmojiModule, { declarations: [Ng2EmojiPipe], imports: [CommonModule], exports: [Ng2EmojiPipe] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(Ng2EmojiModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule
+                ],
+                declarations: [
+                    Ng2EmojiPipe
+                ],
+                exports: [
+                    Ng2EmojiPipe
+                ]
+            }]
+    }], null, null); })();
+
+/*
+ * Public API Surface of ng2-emoji
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+export { Ng2EmojiModule, Ng2EmojiPipe, Ng2EmojiService };
+//# sourceMappingURL=ng2-emoji.js.map
