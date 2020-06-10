@@ -15,8 +15,7 @@
   "keywords": [
     "angular"
   ],
-  "license": "MIT",
-  "bugs": {
+  "license": "MIT",  "bugs": {
     "url": "https://github.com/standuply/ng2-emoji/issues"
   },
   "engines": {
