@@ -1,0 +1,10 @@
+import { PipeTransform } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import * as i0 from "@angular/core";
+export declare class Ng2EmojiPipe implements PipeTransform {
+    private _sanitizer;
+    constructor(_sanitizer: DomSanitizer);
+    transform(value: string, args: any[]): SafeHtml;
+    static ɵfac: i0.ɵɵFactoryDef<Ng2EmojiPipe, never>;
+    static ɵpipe: i0.ɵɵPipeDefWithMeta<Ng2EmojiPipe, "emojis">;
+}

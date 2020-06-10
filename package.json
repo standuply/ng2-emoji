@@ -1,26 +1,36 @@
 {
-  "name": "ng2-emoji",
-  "version": "9.0.0",
-  "repository": {
+  "_args": [
+    [
+      "github:standuply/ng2-emoji",
+      "/home/moricube/Projects/Standuply/standuply"
+    ]
+  ],
+  "_from": "github:standuply/ng2-emoji",
+  "_id": "@standuply/ng2-emoji@github:standuply/ng2-emoji#3257b29c7096dcd65a4e317372013063c353694e",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/@standuply/ng2-emoji",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "https://github.com/standuply/ng2-emoji"
+    "raw": "github:standuply/ng2-emoji",
+    "rawSpec": "github:standuply/ng2-emoji",
+    "saveSpec": "github:standuply/ng2-emoji",
+    "fetchSpec": null,
+    "gitCommittish": null
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:standuply/ng2-emoji#3257b29c7096dcd65a4e317372013063c353694e",
+  "_spec": "github:standuply/ng2-emoji",
+  "_where": "/home/moricube/Projects/Standuply/standuply",
   "author": {
     "name": "Ahsan Ayaz",
     "email": "ahsan.ubitian@gmail.com"
   },
-  "keywords": [
-    "angular"
-  ],
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/standuply/ng2-emoji/issues"
-  },
-  "engines": {
-    "node": ">=6.0.0"
   },
   "dependencies": {
     "@angular/cli": "^9.1.6",
@@ -34,16 +44,34 @@
     "tslib": "^1.9.0",
     "vinyl-buffer": "^1.0.0"
   },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "es2015": "fesm2015/ng2-emoji.js",
+  "esm2015": "esm2015/ng2-emoji.js",
+  "esm5": "esm5/ng2-emoji.js",
+  "fesm2015": "fesm2015/ng2-emoji.js",
+  "fesm5": "fesm5/ng2-emoji.js",
+  "homepage": "https://github.com/standuply/ng2-emoji#readme",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
   "main": "bundles/ng2-emoji.umd.js",
   "module": "fesm5/ng2-emoji.js",
-  "es2015": "fesm2015/ng2-emoji.js",
-  "esm5": "esm5/ng2-emoji.js",
-  "esm2015": "esm2015/ng2-emoji.js",
-  "fesm5": "fesm5/ng2-emoji.js",
-  "fesm2015": "fesm2015/ng2-emoji.js",
-  "typings": "ng2-emoji.d.ts",
-  "sideEffects": false,
+  "name": "@standuply/ng2-emoji",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/standuply/ng2-emoji.git"
+  },
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  },
+  "sideEffects": false,
+  "typings": "ng2-emoji.d.ts",
+  "version": "9.0.0"
 }
